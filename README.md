@@ -10,7 +10,6 @@ B --> C{Build Docker Image}
 C --> D{Push Docker Image}
 D --> E{Deploy to Kubernetes}
 E --> F{Application Running ("Hello World!")}
-D --> G{Post-Deployment Verification (Optional)}
 G --> E
 B --> H{Credentials (Git)}
 D --> I{Credentials (Docker Hub)}

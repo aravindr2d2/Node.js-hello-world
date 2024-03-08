@@ -9,7 +9,7 @@ A[Git Repository] --> B{Checkout Code}
 B --> C{Build Docker Image}
 C --> D{Push Docker Image}
 D --> E{Deploy to Kubernetes}
-E --> F{Application Running ("Hello World!")}
+E --> F{Application Running }
 G --> E
 B --> H{Credentials (Git)}
 D --> I{Credentials (Docker Hub)}

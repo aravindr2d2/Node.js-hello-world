@@ -4,7 +4,7 @@ pipeline {
     stages {
         stage('Checkout code') {
             steps {
-                git branch: 'master', credentialsId: 
+                git branch: 'master', credentialsId: 'github_id'
             }
         }
         stage('Build Docker image') {

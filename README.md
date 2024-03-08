@@ -5,3 +5,9 @@ This repository contains a Node.js "Hello World" application with deployment con
 
 
 
+```mermaid
+flowchart TD;
+    A[Start] --> B[Process 1];
+    B --> C[Process 2];
+    C --> D[End];
+```

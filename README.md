@@ -3,7 +3,7 @@
 This repository contains a Node.js "Hello World" application with deployment configurations for Docker and Kubernetes using Jenkins.
 
 
-'''mermaid
+```mermaid
 graph LR
 A[Git Repository] --> B{Checkout Code}
 B --> C{Build Docker Image}
@@ -15,6 +15,6 @@ G --> E
 B --> H{Credentials (Git)}
 D --> I{Credentials (Docker Hub)}
 E --> J{Credentials (Kubernetes)}
-'''
+```
 
 

@@ -4,7 +4,7 @@ pipeline {
     stages {
         stage('Checkout code') {
             steps {
-                git branch: 'master', credentialsId: 'your-git-credentials-id' (if using Git)
+                git branch: 'master', credentialsId: 
             }
         }
         stage('Build Docker image') {
@@ -14,7 +14,6 @@ pipeline {
         }
         stage('Push Docker image') {
             steps {
-                // Login to your Docker registry (if pushing to a private registry)
                 withCredentials([usernamePassword(credentialsId: 'docker-hub-credentials', usernameVariable: 'USERNAME', passwordVariable: 'PASSWORD')]) {
                     sh "docker login -u ${USERNAME} -p ${PASSWORD}"
                 }
@@ -48,7 +47,6 @@ spec:
 """
                     writeFile label: 'deployment.yaml', content: deployment
                 }
-                // Apply the deployment manifest using kubectl
                 kubernetesApply file: 'deployment.yaml'
             }
         }
